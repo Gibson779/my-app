@@ -1,12 +1,6 @@
 
 export default function App() {
-  /**
-   * Challenge: grab the employment status from the form and log it
-   * to the console. (Remember to select one of the radios before submitting)
-   * 
-   * Note: This won't work the way you might expect quite yet!
-   */
-
+  
   function signUp(formData) {
     const email = formData.get("email")
     const password = formData.get("password")
@@ -47,16 +41,16 @@ export default function App() {
         <fieldset>
           <legend>Dietary restrictions:</legend>
           <label>
-            <input type="radio" name="employmentStatus" value="unemployed" />
-            Unemployed
+            <input type="checkbox" name="employmentStatus" value="vegan" />
+            Vegan
         </label>
           <label>
-            <input type="radio" name="employmentStatus" value="part-time" />
-            Part-time
+            <input type="checkbox" name="employmentStatus" value="Kosher" />
+            Kosher
         </label>
           <label>
-            <input type="radio" name="employmentStatus" defaultChecked={true} value="full-time" />
-            Full-time
+            <input type="checkbox" name="employmentStatus" defaultChecked={true} value="gluten-free" />
+            Gluten-free
         </label>
         </fieldset>
 
