@@ -1,11 +1,18 @@
 
 export default function App() {
-  
+  /**
+   * Challenge: grab the employment status from the form and log it
+   * to the console. (Remember to select one of the radios before submitting)
+   * 
+   * Note: This won't work the way you might expect quite yet!
+   */
+
   function signUp(formData) {
     const email = formData.get("email")
     const password = formData.get("password")
     const employmentStatus = formData.get("employmentStatus")
-    console.log(employmentStatus)
+    const dietaryRestrictions = formData.getAll("dietaryRestrictions")
+    console.log(dietaryRestrictions)
   }
 
   return (
@@ -41,18 +48,33 @@ export default function App() {
         <fieldset>
           <legend>Dietary restrictions:</legend>
           <label>
-            <input type="checkbox" name="employmentStatus" value="vegan" />
-            Vegan
-        </label>
-          <label>
-            <input type="checkbox" name="employmentStatus" value="Kosher" />
+            <input type="checkbox" name="dietaryRestrictions" value="kosher" />
             Kosher
         </label>
           <label>
-            <input type="checkbox" name="employmentStatus" defaultChecked={true} value="gluten-free" />
+            <input type="checkbox" name="dietaryRestrictions" value="vegan" />
+            Vegan
+        </label>
+          <label>
+            <input type="checkbox" name="dietaryRestrictions" defaultChecked={true} value="gluten-free" />
             Gluten-free
         </label>
         </fieldset>
+
+        <label htmlFor="favColor"> What is your favourite colour? </label>
+
+          <select id ="favColour">
+            <option>Red</option> 
+             <option>Orange</option> 
+              <option>Yellow</option> 
+               <option>Green</option> 
+                <option>Indigo</option> 
+                <option>Voilet </option> 
+
+                
+
+          </select>
+        
 
         <button>Submit</button>
 
