@@ -1,18 +1,14 @@
 
 export default function App() {
-  /**
-   * Challenge: grab the employment status from the form and log it
-   * to the console. (Remember to select one of the radios before submitting)
-   * 
-   * Note: This won't work the way you might expect quite yet!
-   */
+ 
 
   function signUp(formData) {
     const email = formData.get("email")
     const password = formData.get("password")
     const employmentStatus = formData.get("employmentStatus")
     const dietaryRestrictions = formData.getAll("dietaryRestrictions")
-    console.log(dietaryRestrictions)
+    const favColor = formData.get("favColor")
+    console.log(favColor)
   }
 
   return (
@@ -63,15 +59,14 @@ export default function App() {
 
         <label htmlFor="favColor"> What is your favourite colour? </label>
 
-          <select id ="favColour">
-            <option>Red</option> 
-             <option>Orange</option> 
-              <option>Yellow</option> 
-               <option>Green</option> 
-                <option>Indigo</option> 
-                <option>Voilet </option> 
-
-                
+          <select id ="favColour" name ="faveColour" defaultValue="" required>
+            <option value="" disabled>-- Choose a color --</option>
+            <option value =" red">Red</option> 
+             <option value ="orange">Orange</option> 
+              <option value ="yellow">Yellow</option> 
+               <option value ="green ">Green</option> 
+                <option value ="indigo">Indigo</option> 
+                <option value ="voilet">Voilet </option> 
 
           </select>
         
